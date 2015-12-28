@@ -1,0 +1,8 @@
+extends layout
+
+block content
+  h1= user.name
+  = JSON.stringify(connections)
+  for connection in connections 
+    ul
+      a(href="/users/" + connection.id)= connection.name

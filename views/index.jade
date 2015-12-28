@@ -2,4 +2,5 @@ extends layout
 
 block content
   for user in users
-    li= user.name
+    li
+      a(href="/users/" + user.id)= user.name
